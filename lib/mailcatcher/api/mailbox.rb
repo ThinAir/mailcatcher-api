@@ -12,6 +12,17 @@ module MailCatcher
         @collection = nil if reload == true
         @collection ||= MessageCollection.new
       end
+
+      def clear
+        connection.delete("/messages")
+      end
+
+      private
+
+      def connection
+        MailCatcher::API::Mailbox::Connection.instance
+      end
+
     end
   end
 end

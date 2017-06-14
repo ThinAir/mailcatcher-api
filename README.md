@@ -63,6 +63,12 @@ emai.charset
 emai.content_type
 
 emai.links
+
+# Delete a specific message:
+email.delete
+
+# Clear all messages in the mailbox:
+mailbox.clear
 ```
 
 ## TODO

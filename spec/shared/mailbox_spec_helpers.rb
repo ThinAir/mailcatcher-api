@@ -20,11 +20,15 @@ module MailboxSpecHelpers
               body: MultiJson.dump(FactoryGirl.build(:email, id: request.uri.path[/\d+/]))
             }
           end
+
+        @stub_clear_mailbox = stub_request(:delete, "#{mailbox_server}/messages")
+          .to_return(204, body: nil)
       end
 
       def unstub_mailbox
         remove_request_stub(@stub_email_index) if @stub_email_index
         remove_request_stub(@stub_email) if @stub_email
+        remove_request_stub(@stub_clear_mailbox) if @stub_clear_mailbox
 
         @mailbox_size = nil
         @mailbox_email_index = nil

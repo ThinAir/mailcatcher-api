@@ -30,6 +30,16 @@ module MailCatcher
         def links
           @links ||= URI.extract(@decoded_body).select { |s| s.start_with? 'http' }
         end
+
+        def delete
+          connection.delete("/messages/#{ id }")
+        end
+
+        private
+
+        def connection
+          MailCatcher::API::Mailbox::Connection.instance
+        end
       end
     end
   end

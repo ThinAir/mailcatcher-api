@@ -38,5 +38,8 @@ describe MailCatcher::API::Mailbox do
     it '#count' do
       expect(mailbox.messages.count).to be @mailbox_size
     end
+
+    describe '#delete' do
+    end
   end
 end
