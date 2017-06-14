@@ -59,10 +59,10 @@ email.subject
 email.body
 
 email.mime_type
-emai.charset
-emai.content_type
+email.charset
+email.content_type
 
-emai.links
+email.links
 ```
 
 ## TODO
