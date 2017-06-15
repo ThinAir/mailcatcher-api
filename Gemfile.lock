@@ -13,11 +13,9 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     addressable (2.3.6)
-    ansi (1.4.3)
-    builder (3.2.2)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
-    diff-lcs (1.2.5)
+    diff-lcs (1.3)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     faraday (0.9.0)
@@ -26,19 +24,21 @@ GEM
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
     mime-types (2.3)
-    minitest (5.4.0)
-    minitest-reporters (1.0.5)
-      ansi
-      builder
-      minitest (>= 5.0)
-      ruby-progressbar
     multi_json (1.10.1)
     multipart-post (2.0.0)
-    rspec-expectations (3.0.2)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+    rspec-core (3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-expectations (3.6.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.0.0)
-    rspec-support (3.0.2)
-    ruby-progressbar (1.5.1)
+      rspec-support (~> 3.6.0)
+    rspec-mocks (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-support (3.6.0)
     safe_yaml (1.0.3)
     webmock (1.18.0)
       addressable (>= 2.3.6)
@@ -50,7 +50,8 @@ PLATFORMS
 DEPENDENCIES
   factory_girl (~> 4.4)
   mailcatcher-api!
-  minitest (~> 5.4)
-  minitest-reporters (~> 1.0)
-  rspec-expectations (~> 3.0)
+  rspec (>= 3.6.0)
   webmock (~> 1.18)
+
+BUNDLED WITH
+   1.15.1

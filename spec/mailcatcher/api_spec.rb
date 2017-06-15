@@ -1,4 +1,4 @@
-require_relative '../spec_helper'
+require 'spec_helper'
 
 describe MailCatcher::API do
   describe 'configurable' do
@@ -26,7 +26,7 @@ describe MailCatcher::API do
           MailCatcher::API.configure do |config|
             config.unknown = server
           end
-        }.to raise_error
+        }.to raise_error NoMethodError
       end
     end
   end

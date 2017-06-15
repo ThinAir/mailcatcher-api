@@ -20,9 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'multi_json', '~> 1.10'
   s.add_dependency 'faraday', '~> 0.9'
   s.add_dependency 'mail', '~> 2.6'
-  s.add_development_dependency 'minitest', '~> 5.4'
-  s.add_development_dependency 'minitest-reporters', '~> 1.0'
-  s.add_development_dependency 'rspec-expectations', '~> 3.0'
+  s.add_development_dependency 'rspec', '>= 3.6.0'
   s.add_development_dependency 'factory_girl', '~> 4.4'
   s.add_development_dependency 'webmock', '~> 1.18'
 end

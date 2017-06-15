@@ -8,6 +8,11 @@ module MailCatcher
             faraday.adapter :net_http
           end
         end
+
+        def self.reset!
+          @@connection = nil
+          self.instance
+        end
       end
     end
   end

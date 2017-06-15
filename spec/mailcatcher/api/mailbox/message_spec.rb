@@ -1,4 +1,4 @@
-require_relative '../../../spec_helper'
+require 'spec_helper'
 
 describe MailCatcher::API::Mailbox::Message do
 
@@ -25,7 +25,7 @@ describe MailCatcher::API::Mailbox::Message do
     expect(msg).to respond_to :content_type
 
     expect(msg).to respond_to :links
-    
+
     expect(msg).to respond_to :delete
   end
 

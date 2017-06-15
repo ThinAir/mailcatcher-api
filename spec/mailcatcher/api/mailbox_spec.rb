@@ -1,4 +1,4 @@
-require_relative '../../spec_helper'
+require 'spec_helper'
 
 describe MailCatcher::API::Mailbox do
   include MailboxSpecHelpers
@@ -39,7 +39,10 @@ describe MailCatcher::API::Mailbox do
       expect(mailbox.messages.count).to be @mailbox_size
     end
 
-    describe '#delete' do
+    describe '#clear' do
+      it 'clears the mailbox' do
+        expect(mailbox.clear).to be_truthy
+      end
     end
   end
 end
