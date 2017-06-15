@@ -36,7 +36,7 @@ describe MailCatcher::API::Mailbox do
     end
 
     it '#count' do
-      expect(mailbox.messages.count).to be @mailbox_size
+      expect(mailbox.count).to be @mailbox_size
     end
 
     describe '#clear' do

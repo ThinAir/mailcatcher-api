@@ -49,4 +49,29 @@ describe MailCatcher::API::Mailbox::Message do
 
     expect(msg.links).to eq(email['links'])
   end
+
+  describe '#delete' do
+    before do
+      @msg = msg_class.new('mail raw source')
+      expect(@msg).to receive(:connection) do
+        connection = double('connection')
+        expect(connection).to receive(:delete).with('/messages/%d' % @msg.id).and_return(true)
+        connection
+      end
+    end
+    it 'deletes the message' do
+      expect(@msg.delete).to be true
+    end
+  end
+
+  describe '#connection' do
+    before do
+      @msg = msg_class.new('mail raw source')
+      @instance = :fake_instance
+      expect(MailCatcher::API::Mailbox::Connection).to receive(:instance).and_return(@instance)
+    end
+    it 'returns the current connection instance' do
+      expect(@msg.send(:connection)).to eq(@instance)
+    end
+  end
 end

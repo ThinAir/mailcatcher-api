@@ -23,4 +23,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '>= 3.6.0'
   s.add_development_dependency 'factory_girl', '~> 4.4'
   s.add_development_dependency 'webmock', '~> 1.18'
+  s.add_development_dependency 'simplecov', '>= 0.14.1'
 end

@@ -20,7 +20,7 @@ describe MailCatcher::API::Middleware::NetworkExceptions do
 
   it 'error: connection failed' do
     MailCatcher::API.config.server = 'http://not-existing-server.com:3000'
-    @stub = stub_request(:get, /.*/).to_timeout
+    expect_any_instance_of(Faraday::Adapter::NetHttp).to receive(:call){ raise MailCatcher::API::Error::Connection }
     expect { mailbox.messages }.to raise_error(MailCatcher::API::Error::Connection)
   end
 end

@@ -11,7 +11,6 @@ module MailCatcher
 
         def self.reset!
           @@connection = nil
-          self.instance
         end
       end
     end
