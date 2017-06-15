@@ -71,6 +71,17 @@ email.delete
 mailbox.clear
 ```
 
+## Running Tests
+
+After cloning the repository:
+
+```bash
+bundle install
+bundle exec rspec
+```
+
+NOTE: Test coverage is required to be at 100%.
+
 ## TODO
 
 * Implement CollectionProxy for the mailbox messages similar to ActiveRecord.
