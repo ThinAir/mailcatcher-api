@@ -59,10 +59,9 @@ email.subject
 email.body
 
 email.mime_type
-emai.charset
-emai.content_type
-
-emai.links
+email.charset
+email.content_type
+email.links
 
 # Delete a specific message:
 email.delete
