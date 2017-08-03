@@ -25,6 +25,8 @@ describe MailCatcher::API::Mailbox::Message do
     expect(msg).to respond_to :content_type
 
     expect(msg).to respond_to :links
+    
+    expect(msg).to respond_to :delete
   end
 
   it 'initializable' do
